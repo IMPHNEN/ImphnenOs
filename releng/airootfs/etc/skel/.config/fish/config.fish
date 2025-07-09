@@ -1,5 +1,5 @@
 function fish_greeting
-  chafa ~/.config/fish/banner.png
+  chafa ~/.config/maomao/banner.png
 end
 
 function neofetch
