@@ -34,7 +34,7 @@ Sekarang Sistemnya udah terintegrasi sama Window Manager MaoMaowm, yang berbasis
 ## Cara buat
 download ISO nya di sini
 
-[ImphnenOs.iso](https://github.com/IMPHNEN/ImphnenOs/releases/download/Beta/ImphnenOs-2025.03.11-x86_64.iso) 
+[ImphnenOs.iso](https://github.com/IMPHNEN/ImphnenOs/releases/download/Pita/ImphnenOs-P-I-T-A-x86_64.iso) 
 
 kemudian buat bootable menggunakan rufus / ventoy
 ``ingat untuk rufus pakai mode DD jangan ISO``
