@@ -1,0 +1,12 @@
+# remove from airootfs!
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = glibc
+
+[Action]
+Description = Generating localisation files...
+When = PostTransaction
+Depends = glibc
+Exec = /usr/bin/locale-gen

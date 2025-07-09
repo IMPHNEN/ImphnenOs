@@ -1037,7 +1037,7 @@ ${magenta}###${nc}-----------------------------------${magenta}[ ${bwhite}Secure
         YELLOW "
 
         >  Sign UKI(s), Kernel & binaries for use with ${nc}Secure Boot ${yellow}? [Y/n]
-        ### kalau abodin gapake ini sih,pilih 'n' aja. gatau fungsinya asli"
+        ### bikin kernelnya satu di /boot/efi (no aja ribet soalnya)"
         BLUE "
 
 
@@ -1969,7 +1969,7 @@ ${magenta}###${nc}--------------------------------------${magenta}[ ${bwhite}Des
         "
         YELLOW "
 
-        >  Make a selection: "
+        >  pilih Desktop: "
         NC "
 
             [1]  Plasma
@@ -1996,7 +1996,9 @@ ${magenta}###${nc}--------------------------------------${magenta}[ ${bwhite}Des
 
            [12]  Custom Arch Linux
            
-           [13]  Cosmic   ${red}# ${yellow}Alpha ${red}# "
+           [13]  Cosmic 
+           
+           [14]  Maomao(Default)     ${red}# ${yellow}Alpha ${red}# "
         BLUE "
 
 
@@ -2102,6 +2104,8 @@ Enter [Y/n]: "
             return 0 ;;
        13)
             desktopname="Cosmic" ;;
+       14)
+            desktopname="Maomao" ;;
        "")
             choice
             return 1 ;;
@@ -5548,6 +5552,10 @@ ${magenta}###${nc}-------------------------------------${magenta}[ ${bwhite}Pacs
             deskpkgs="${basepkgs[*]} cosmic networkmanager"
             displaymanager="cosmic-greeter"
             network="NetworkManager" ;;
+       14)  # Maomao:
+            deskpkgs="${basepkgs[*]} networkmanager"
+            displaymanager="ly"
+            network="NetworkManager" ;;
     esac
     # TODO: tambahin opsi buat custom uhhh, yes, Hyprland paling, atau Dwm
     # ajah??. idk
@@ -6244,7 +6252,7 @@ ${magenta}###${nc}--------------------------------${magenta}[ ${bwhite}Chroot & 
         "
 
     # 'Vanilla' Setups Configuration:
-    if [[ "${packages}" =~ ^(1|3|5|6|7|8|9|10|11|13)$ ]]; then
+    if [[ "${packages}" =~ ^(1|3|5|6|7|8|9|10|11|13|14)$ ]]; then
         cnfg
         main_chroot
 

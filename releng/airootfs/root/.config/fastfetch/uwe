@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+#
+# fastfetch-random-queue.sh
+# Muestra una imagen distinta en cada ejecución hasta agotar la lista,
+# luego vuelve a barajar todas las imágenes del directorio.
+
+# ─────────── Configuración ───────────
+IMAGE_DIR="$HOME/Downloads/Photos"               # Carpeta con tus imágenes
+CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}"     # Respeta XDG si existe
+LIST_FILE="$CACHE_DIR/fastfetch_image_queue"    # Cola de imágenes barajada
+
+mkdir -p "$CACHE_DIR"                           # Asegura que ~/.cache existe
+
+# ─────────── (Re)generar cola si hace falta ───────────
+if [[ ! -s "$LIST_FILE" ]]; then
+  # Crea lista barajada, 1 ruta por línea (maneja espacios con NUL)
+  find "$IMAGE_DIR" -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) -print0 \
+    | shuf -z \
+    | tr '\0' '\n' > "$LIST_FILE"
+fi
+
+# ─────────── Tomar la primera imagen de la cola ───────────
+read -r RANDOM_IMAGE < "$LIST_FILE"         # Primer línea
+# Elimina esa línea de la cola
+tail -n +2 "$LIST_FILE" > "${LIST_FILE}.tmp" && mv "${LIST_FILE}.tmp" "$LIST_FILE"
+
+# Verifica que exista (por si fue borrada entre ejecuciones)
+if [[ ! -f "$RANDOM_IMAGE" ]]; then
+  # Fuerza regeneración en la próxima llamada
+  : > "$LIST_FILE"
+  exec "$0"                                 # Reintenta inmediatamente
+fi
+
+# ─────────── Ejecutar fastfetch ───────────
+fastfetch --logo "$RANDOM_IMAGE" \
+--logo-position left \
+--logo-width 50 \
+--logo-padding 1
+
+PINK='\e[38;5;199m'
+YELLOW='\e[38;5;226m'
+RED='\e[91m'
+WHITE='\e[97m'
+DARKGRAY='\e[38;5;240m'
+ORANGE='\e[38;5;202m'
+RESET='\e[0m'
+
+echo -e "${PINK}SilentKnight es el mej${RESET}${YELLOW}or Crack Ship de${RESET} ${RED}R${WHITE}W${DARKGRAY}B${ORANGE}Y${RESET}!!!"

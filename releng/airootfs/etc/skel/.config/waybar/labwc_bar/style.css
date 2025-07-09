@@ -1,0 +1,50 @@
+/* Global styles */
+* {
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+    font-family: "monospace", "Font Awesome 6 Free"; /* Replace with your preferred font */
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+    color: #ffffff;
+}
+
+/* Module styles */
+#workspaces button {
+    padding: 0 5px;
+    color: #bbbbbb;
+    background: transparent;
+}
+
+#workspaces button.focused {
+    color: #ffffff;
+    background: #333333;
+    border-bottom: 2px solid #66ccff;
+}
+
+#mode {
+    background: #cc6666;
+    color: #ffffff;
+    padding: 0 5px;
+}
+
+#clock {
+    padding: 0 10px;
+}
+
+#network,
+#pulseaudio,
+#battery,
+#tray {
+    padding: 0 8px;
+}
+
+#tray * {
+    background: transparent;
+    border: none;
+}

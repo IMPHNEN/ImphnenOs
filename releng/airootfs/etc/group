@@ -1,0 +1,5 @@
+root:x:0:root
+adm:x:4:malasngoding
+wheel:x:10:malasngoding
+uucp:x:14:malasngoding
+malasngoding:x:1000:

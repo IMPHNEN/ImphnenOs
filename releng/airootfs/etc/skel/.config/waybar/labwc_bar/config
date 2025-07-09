@@ -1,0 +1,60 @@
+{
+    "layer": "top", // Or "bottom"
+    "position": "top", // Or "bottom", "left", "right"
+    "modules-left": [
+        "wlr/workspaces",
+        "wlr/mode"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "battery",
+        "tray"
+    ],
+    "wlr/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false
+    },
+    "wlr/mode": {
+        "format": "<span style='italic'>{}</span>"
+    },
+    "clock": {
+        "format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+    "network": {
+        "format-wifi": "󰤨 {essid} ({signalStrength}%)",
+        "format-ethernet": "󰈚 {ipaddr4}",
+        "tooltip-format": "{ifname} @ {ipaddr4} "
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": {
+            "headphone": "󰋋",
+            "handsfree": "󰋋",
+            "headset": "󰋋",
+            "phone": "󰋋",
+            "portable": "󰋋",
+            "car": "󰋋",
+            "hifi": "󰋋",
+            "multi-media": "󰋋",
+            "speakers": "󰋐",
+            "default": [ "󰕿", "󰖀", "󰖁", "󰖂", "󰖃" ]
+        },
+        "on-click": "pavucontrol"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "󰢟 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+    "tray": {
+        "icon-size": 20,
+        "spacing": 5
+    }
+}

@@ -7,9 +7,28 @@ Tujuan dibuatkan project gajelas ini ya karena buat memfasilitasi para member ma
 ## FITUR
 - Live images (gaperlu ribet ngurusin installasi linux, trus ngehapus windows kalian) tinggal bikin bootable pakai rufus (``ingat pake mode DD jangan mode ISO``)
 - Konek Wifi EZ (kali linux senggol ni boss)
-- langsung buka fesnuk tanpa ba bi bu
-- cuman bisa buka fesnuk
-- fesnuk doang jir yang bisa
+- ~langsung buka fesnuk tanpa ba bi bu~
+- ~cuman bisa buka fesnuk~
+- ~fesnuk doang jir yang bisa~
+- Sekarang Bisa Semua (Installernya belum jadi sih hehe :3).
+- Sistem Ringan Karena pakai window manager MaoMao
+
+
+
+
+## FITUR UPDAATEEEEEEE
+Sekarang Sistemnya udah terintegrasi sama Window Manager MaoMaowm, yang berbasis [dwl](https://codeberg.org/dwl/dwl) yang mana lebih ringan (Daripada Hyprslop) dan ada animasi dan blur some shit you guys like, config eee mudah + ada sistem scrolling windows yang baru muncul di kancah per ricing an linuj, untuk ImphnenOs ini menggunakan layout scrolling secara default karena: 
+
+- Lebih enak di perangkat yang memiliki layar sempit ( Laptop kao), jadi tidak terbatas dengan ukuran layar, jadi bisa banyak windows per workspacenya + more rajing mengodinj
+![gif scroll](media/doto.gif)
+
+- *windows preview*, fitur menampilkan windows yang ada, jadi gak ribet kalau cari windows (arahkan mouse ke kiri bawah layar)
+
+![gif workspace](media/preview.gif)
+
+- Ringan. cuman makan 100MB ram untuk fitur lengkap
+
+![maomao maomao](media/maomao.png)
 
 
 ## Cara buat
@@ -20,20 +39,25 @@ download ISO nya di sini
 kemudian buat bootable menggunakan rufus / ventoy
 ``ingat untuk rufus pakai mode DD jangan ISO``
  
-atau pakai qemu (kalau pro dan rajin ngoding)
+atau testing menggunakan Qemu (untuk vmware gatau dan malas mencari tahu)
+
 ```
 qemu-system-x86_64 -cdrom lokasi/iso/nya.iso -boot d -m 2048
 ```
 
-![gambar dsw](media/fesnuk.png) 
+
+setelah boot akan keluar ~grub~(grub rusak bruh, gabisa boot) Systemd-boot / syslinuj , klik enter ae (yang paling atas atau yes fesnuk apalah)
 
 
-setelah boot akan keluar grub, klik enter ae (masih WIP JIR jadi belum pakai custom grub masih bawaan arch btw linuk)
+Trus booting ke uuhhh, yes, 
+
+![wollpeper](media/wallpaper_imphnenos.png)
 
 
-nanti setelah boot akan keluar network manager (layar kao warna biru) untuk navigasi menggunakan arrow atas bawah kiri kanan kotak x segitiga enter, untuk user wifi masuk dahulu ke "Activate a connection" buat konek wingfi nyah, udah itu klik exit, langsung buka fesnuk.
+buat user W I F I ! ! !. kalau di bar bawah ada tulisan merah "Disconnected" berarti gak konek internet. tekan dulu Windows + W buat setup wifi korang, trus Windows + O buat buka Brave.
 
-![fesnuk](media/nmtui.png) 
+
+## Installernya masih TO-DO list, belum beres, takut jir nanti media asusila kalian gak sengaja terhapuskan sehingga kalian tidak bisa melakukan aksi tidak terpuji di dalam kamar sendiri, jadi harus full testing dulu biar aman dipakai (baca: malas bikin installernya njing)
 
 buat keluarnya klik tombol power hehe.
 
@@ -45,6 +69,7 @@ dengan cara
 - menyukai dedek lembut
 - bisa pakai git (opsional)
 - masih normal (opsional)
+- Bukan Pendukung Manchester United
 
 ### HOW-TO
 
@@ -54,7 +79,7 @@ sudo pacman -S archiso
 ```
 sudah tuh clone ni repo
 ```
-git clone https://github.com/shigure/ImphnenOs.git
+git clone https://github.com/Imphnen/ImphnenOs.git
 ```
 kemudian modif atau apalah bebas yang penting jangan sampe kernel panic
 
@@ -105,12 +130,17 @@ just strapping some shit lately,
 
 ## TODO
 
-- [x] bikin custom neofetch
-- [x] bikin calamares installer (biar bisa install ni linuj jelek bin ampas)
-- [x] bikin windows manager (dinfwm, tapi ya nanti implementasi Hyprland "kalau
- gak malas")
-- [x] bikin webpage
+- [.] bikin custom neofetch
+- [x] bikin calamares installer (biar bisa install ni linuj jelek bin ampas) (M A L A S)
+- [.] bikin windows manager (Sudah beres pakai maomaowm desuwa)
+- [x] bikin webpage + Wiki (yang bisa webdev tolong bantu lah jir)
 - [x] bikin repo server (uhh, biar repo yang di aur tinggal comot, ada beberapa package penting kek visual-studio-code (bukan oss-code), waydroid(buat native android app), proton-GE (gayming), terabox, dll)
-- [x] idk, pukulin atmint 
+- [x] Implementasi Aplikasi Bajakan, uwehhh
 
+
+
+# Special Tanks
+- Atmint dan Member Malas ngoding IMPHNEN (Ngoding sana lu njing) [malas](https://niyaniya.moe)
+- MaoMao, The creator of maomaowm. [Linknya](https://github.com/DreamMaoMao/maomaowm)
+- Bapak Joko Widodo yang senantiasa membangun indonesia. H I D U P  J O K O W I
 
