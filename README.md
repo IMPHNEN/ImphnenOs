@@ -17,7 +17,7 @@ Tujuan dibuatkan project gajelas ini ya karena buat memfasilitasi para member ma
 
 
 ## FITUR UPDAATEEEEEEE
-Sekarang Sistemnya udah terintegrasi sama Window Manager MaoMaowm, yang berbasis [dwl](https://codeberg.org/dwl/dwl) yang mana lebih ringan (Daripada Hyprslop) dan ada animasi dan blur some shit you guys like, config eee mudah + ada sistem scrolling windows yang baru muncul di kancah per ricing an linuj, untuk ImphnenOs ini menggunakan layout scrolling secara default karena: 
+Sekarang Sistemnya udah terintegrasi sama Window Manager MaoMaowm, yang berbasis [dwl](https://codeberg.org/dwl/dwl) yang mana lebih ringan (Daripada Hyprslop) dan ada animasi dan blur some shit you guys like, config eee mudah + ada sistem scrolling windows yang baru muncul di kancah per ricing an linux, untuk ImphnenOs ini menggunakan layout scrolling secara default karena: 
 
 - Lebih enak di perangkat yang memiliki layar sempit ( Laptop kao), jadi tidak terbatas dengan ukuran layar, jadi bisa banyak windows per workspacenya + more rajing mengodinj
 ![gif scroll](media/doto.gif)
